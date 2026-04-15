@@ -11,12 +11,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-charcoal text-white/80">
-      <AnimatedSection direction="up" className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <AnimatedSection direction="up" className="mx-auto max-w-7xl px-6 py-16">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Scissors className="w-5 h-5 text-gold" />
+            <Link href="/" className="mb-4 flex items-center gap-2">
+              <Scissors className="text-gold h-5 w-5" />
               <span className="font-serif text-xl font-bold text-white">
                 {brand.name}
               </span>
@@ -26,13 +26,13 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-white text-lg mb-4">Quick Links</h4>
+            <h4 className="mb-4 font-serif text-lg text-white">Quick Links</h4>
             <ul className="space-y-2">
               {navigation.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm hover:text-gold transition-colors"
+                    className="hover:text-gold text-sm transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-white text-lg mb-4">Contact</h4>
+            <h4 className="mb-4 font-serif text-lg text-white">Contact</h4>
             <ul className="space-y-2 text-sm">
               <li>{brand.address.street}</li>
               <li>
@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Hours */}
           <div>
-            <h4 className="font-serif text-white text-lg mb-4">Hours</h4>
+            <h4 className="mb-4 font-serif text-lg text-white">Hours</h4>
             <ul className="space-y-1 text-sm">
               {brand.hours.map((h) => (
                 <li key={h.day} className="flex justify-between">
@@ -85,7 +85,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} {brand.name}. All rights reserved.
           </p>
@@ -98,7 +98,7 @@ export default function Footer() {
                 className="hover:text-gold transition-colors"
                 aria-label="Instagram"
               >
-                <Globe className="w-5 h-5" />
+                <Globe className="h-5 w-5" />
               </a>
             )}
             {brand.social.facebook && (
@@ -109,7 +109,7 @@ export default function Footer() {
                 className="hover:text-gold transition-colors"
                 aria-label="Facebook"
               >
-                <ExternalLink className="w-5 h-5" />
+                <ExternalLink className="h-5 w-5" />
               </a>
             )}
           </div>

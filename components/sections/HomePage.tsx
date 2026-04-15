@@ -48,24 +48,24 @@ function HeroSection() {
   const shouldReduce = useReducedMotion();
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-charcoal">
+    <section className="bg-charcoal relative flex h-screen items-center justify-center overflow-hidden">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal z-10" />
+      <div className="from-charcoal/70 via-charcoal/50 to-charcoal absolute inset-0 z-10 bg-gradient-to-b" />
       <div className="absolute inset-0 bg-[url('/images/hero-salon.jpg')] bg-cover bg-center opacity-60" />
 
       {/* 3D floating element */}
       {!shouldReduce && (
         <motion.div
-          className="absolute right-[15%] top-1/3 w-32 h-32 border-2 border-gold/30 rounded-full z-10"
+          className="border-gold/30 absolute top-1/3 right-[15%] z-10 h-32 w-32 rounded-full border-2"
           animate={{ rotateY: 360, rotateX: 15 }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           style={{ transformStyle: "preserve-3d" }}
         />
       )}
 
-      <div className="relative z-20 text-center max-w-4xl px-6">
+      <div className="relative z-20 max-w-4xl px-6 text-center">
         <motion.h1
-          className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight"
+          className="mb-6 font-serif text-5xl leading-tight text-white md:text-7xl lg:text-8xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -73,7 +73,7 @@ function HeroSection() {
           {hero.headline}
         </motion.h1>
         <motion.p
-          className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto"
+          className="mx-auto mb-10 max-w-2xl text-lg text-white/70 md:text-xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -87,10 +87,10 @@ function HeroSection() {
         >
           <Link
             href={hero.cta_link}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-charcoal font-semibold text-lg rounded-full hover:bg-gold-light transition-all hover:scale-105"
+            className="bg-gold text-charcoal hover:bg-gold-light inline-flex items-center gap-2 rounded-full px-8 py-4 text-lg font-semibold transition-all hover:scale-105"
           >
             {hero.cta_text}
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="h-5 w-5" />
           </Link>
         </motion.div>
       </div>
@@ -98,12 +98,12 @@ function HeroSection() {
       {/* scroll indicator */}
       {!shouldReduce && (
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+          className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2"
           animate={{ y: [0, 12, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-2 bg-gold rounded-full" />
+          <div className="flex h-10 w-6 justify-center rounded-full border-2 border-white/30 pt-2">
+            <div className="bg-gold h-2 w-1 rounded-full" />
           </div>
         </motion.div>
       )}
@@ -138,7 +138,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   return (
     <span
       ref={ref}
-      className="font-serif text-4xl md:text-5xl font-bold text-gold"
+      className="text-gold font-serif text-4xl font-bold md:text-5xl"
     >
       {count.toLocaleString()}
       {suffix}
@@ -150,11 +150,11 @@ function StatsBar() {
   const content = useContent();
   return (
     <section className="bg-charcoal py-16">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-6 text-center md:grid-cols-4">
         {content.home.stats.map((stat, i) => (
           <AnimatedSection key={i} direction="up" delay={i * 0.1}>
             <Counter value={stat.value} suffix={stat.suffix} />
-            <p className="text-white/60 mt-2 text-sm">{stat.label}</p>
+            <p className="mt-2 text-sm text-white/60">{stat.label}</p>
           </AnimatedSection>
         ))}
       </div>
@@ -168,32 +168,32 @@ function IntroSection() {
   const { intro } = content.home;
 
   return (
-    <section className="py-24 bg-cream">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section className="bg-cream py-24">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 md:grid-cols-2">
         <AnimatedSection direction="left">
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6">
+          <h2 className="text-charcoal mb-6 font-serif text-4xl md:text-5xl">
             {intro.heading}
           </h2>
-          <p className="text-charcoal/70 leading-relaxed text-lg mb-8">
+          <p className="text-charcoal/70 mb-8 text-lg leading-relaxed">
             {intro.text}
           </p>
           <Link
             href={intro.cta_link}
-            className="inline-flex items-center gap-2 text-gold-dark font-semibold hover:gap-4 transition-all"
+            className="text-gold-dark inline-flex items-center gap-2 font-semibold transition-all hover:gap-4"
           >
             {intro.cta_text}
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="h-4 w-4" />
           </Link>
         </AnimatedSection>
         <AnimatedSection direction="right">
-          <Card3D depth={10} className="rounded-2xl overflow-hidden shadow-2xl">
-            <div className="aspect-[4/5] relative">
+          <Card3D depth={10} className="overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative aspect-[4/5]">
               <img
                 src={intro.image}
                 alt={intro.heading}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gold/20 to-transparent" />
+              <div className="from-gold/20 absolute inset-0 bg-gradient-to-t to-transparent" />
             </div>
           </Card3D>
         </AnimatedSection>
@@ -216,19 +216,19 @@ function FeaturedServices() {
   };
 
   return (
-    <section className="py-24 bg-cream-dark">
-      <div className="max-w-7xl mx-auto px-6">
-        <AnimatedSection direction="up" className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-4">
+    <section className="bg-cream-dark py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <AnimatedSection direction="up" className="mb-16 text-center">
+          <h2 className="text-charcoal mb-4 font-serif text-4xl md:text-5xl">
             Our Signature Services
           </h2>
-          <p className="text-charcoal/60 max-w-2xl mx-auto">
+          <p className="text-charcoal/60 mx-auto max-w-2xl">
             Discover the artistry behind every service we offer.
           </p>
         </AnimatedSection>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -241,21 +241,21 @@ function FeaturedServices() {
               <motion.div key={i} variants={item}>
                 <Card3D
                   depth={12}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden group h-full"
+                  className="group h-full overflow-hidden rounded-2xl bg-white shadow-lg"
                 >
-                  <div className="aspect-[3/2] relative overflow-hidden">
+                  <div className="relative aspect-[3/2] overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />
+                    <div className="from-charcoal/60 absolute inset-0 bg-gradient-to-t to-transparent" />
                     <div className="absolute bottom-4 left-4">
-                      <Icon className="w-8 h-8 text-gold" />
+                      <Icon className="text-gold h-8 w-8" />
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-serif text-xl text-charcoal mb-2">
+                    <h3 className="text-charcoal mb-2 font-serif text-xl">
                       {service.title}
                     </h3>
                     <p className="text-charcoal/60 text-sm">
@@ -271,14 +271,14 @@ function FeaturedServices() {
         <AnimatedSection
           direction="up"
           delay={0.4}
-          className="text-center mt-12"
+          className="mt-12 text-center"
         >
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 px-8 py-3 border-2 border-gold text-gold-dark font-semibold rounded-full hover:bg-gold hover:text-charcoal transition-all"
+            className="border-gold text-gold-dark hover:bg-gold hover:text-charcoal inline-flex items-center gap-2 rounded-full border-2 px-8 py-3 font-semibold transition-all"
           >
             View All Services
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="h-4 w-4" />
           </Link>
         </AnimatedSection>
       </div>
@@ -292,26 +292,26 @@ function WhyChooseUs() {
   const { why_us } = content.home;
 
   return (
-    <section className="py-24 bg-cream">
-      <div className="max-w-7xl mx-auto px-6">
-        <AnimatedSection direction="up" className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-4">
+    <section className="bg-cream py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <AnimatedSection direction="up" className="mb-16 text-center">
+          <h2 className="text-charcoal mb-4 font-serif text-4xl md:text-5xl">
             {why_us.heading}
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {why_us.features.map((feature, i) => {
             const Icon = iconMap[feature.icon] || Star;
             const dir = i % 2 === 0 ? "left" : "right";
             return (
               <AnimatedSection key={i} direction={dir} delay={i * 0.1}>
-                <div className="flex gap-4 p-6 rounded-xl hover:bg-white hover:shadow-lg transition-all">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                    <Icon className="w-6 h-6 text-gold" />
+                <div className="flex gap-4 rounded-xl p-6 transition-all hover:bg-white hover:shadow-lg">
+                  <div className="bg-gold/10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
+                    <Icon className="text-gold h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-lg text-charcoal mb-1">
+                    <h3 className="text-charcoal mb-1 font-serif text-lg">
                       {feature.title}
                     </h3>
                     <p className="text-charcoal/60 text-sm">
@@ -342,21 +342,21 @@ function Testimonials() {
   }, [testimonials.length]);
 
   return (
-    <section className="py-24 bg-charcoal overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <AnimatedSection direction="up" className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
+    <section className="bg-charcoal overflow-hidden py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <AnimatedSection direction="up" className="mb-16 text-center">
+          <h2 className="mb-4 font-serif text-4xl text-white md:text-5xl">
             What Our Clients Say
           </h2>
         </AnimatedSection>
 
-        <div className="relative flex items-center justify-center min-h-[300px]">
+        <div className="relative flex min-h-[300px] items-center justify-center">
           {testimonials.map((t, i) => {
             const offset = i - activeIndex;
             return (
               <motion.div
                 key={i}
-                className="absolute w-full max-w-lg mx-auto bg-charcoal-light rounded-2xl p-8 shadow-xl"
+                className="bg-charcoal-light absolute mx-auto w-full max-w-lg rounded-2xl p-8 shadow-xl"
                 animate={{
                   x: offset * 120,
                   scale: offset === 0 ? 1 : 0.85,
@@ -367,18 +367,18 @@ function Testimonials() {
                 transition={{ type: "spring", stiffness: 200, damping: 25 }}
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <Quote className="w-8 h-8 text-gold/30 mb-4" />
-                <p className="text-white/80 text-lg leading-relaxed mb-6">
+                <Quote className="text-gold/30 mb-4 h-8 w-8" />
+                <p className="mb-6 text-lg leading-relaxed text-white/80">
                   {t.text}
                 </p>
                 <div className="flex items-center gap-3">
                   <img
                     src={t.image}
                     alt={t.name}
-                    className="w-10 h-10 rounded-full object-cover border-2 border-gold/40"
+                    className="border-gold/40 h-10 w-10 rounded-full border-2 object-cover"
                   />
                   <div>
-                    <p className="text-white font-semibold">{t.name}</p>
+                    <p className="font-semibold text-white">{t.name}</p>
                     <p className="text-gold text-sm">{t.role}</p>
                   </div>
                 </div>
@@ -388,12 +388,12 @@ function Testimonials() {
         </div>
 
         {/* Dots */}
-        <div className="flex justify-center gap-2 mt-12">
+        <div className="mt-12 flex justify-center gap-2">
           {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => setActiveIndex(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-all ${
+              className={`h-2.5 w-2.5 rounded-full transition-all ${
                 i === activeIndex ? "bg-gold w-8" : "bg-white/20"
               }`}
               aria-label={`Go to testimonial ${i + 1}`}
@@ -412,14 +412,14 @@ function CTABanner() {
   const shouldReduce = useReducedMotion();
 
   return (
-    <section className="relative py-24 bg-gradient-to-r from-charcoal via-charcoal-light to-charcoal overflow-hidden">
+    <section className="from-charcoal via-charcoal-light to-charcoal relative overflow-hidden bg-gradient-to-r py-24">
       {/* Floating orbs */}
       {!shouldReduce && (
         <>
           {[...Array(5)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-3 h-3 bg-gold/20 rounded-full"
+              className="bg-gold/20 absolute h-3 w-3 rounded-full"
               style={{ left: `${15 + i * 18}%`, top: `${20 + (i % 3) * 25}%` }}
               animate={{
                 y: [0, -30, 0],
@@ -435,20 +435,20 @@ function CTABanner() {
         </>
       )}
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <AnimatedSection direction="up">
-          <h2 className="font-serif text-4xl md:text-6xl text-white mb-6">
+          <h2 className="mb-6 font-serif text-4xl text-white md:text-6xl">
             {cta_banner.headline}
           </h2>
-          <p className="text-white/60 text-lg mb-10">
+          <p className="mb-10 text-lg text-white/60">
             {cta_banner.subheadline}
           </p>
           <Link
             href={cta_banner.cta_link}
-            className="inline-flex items-center gap-2 px-10 py-4 bg-gold text-charcoal font-bold text-lg rounded-full hover:bg-gold-light transition-all hover:scale-105"
+            className="bg-gold text-charcoal hover:bg-gold-light inline-flex items-center gap-2 rounded-full px-10 py-4 text-lg font-bold transition-all hover:scale-105"
           >
             {cta_banner.cta_text}
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="h-5 w-5" />
           </Link>
         </AnimatedSection>
       </div>

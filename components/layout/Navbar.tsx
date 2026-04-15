@@ -26,37 +26,37 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        className={`fixed top-0 right-0 left-0 z-50 transition-colors duration-300 ${
           scrolled
-            ? "bg-charcoal/95 backdrop-blur-md shadow-lg"
+            ? "bg-charcoal/95 shadow-lg backdrop-blur-md"
             : "bg-transparent"
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <Scissors className="w-6 h-6 text-gold group-hover:rotate-45 transition-transform duration-300" />
-            <span className="font-serif text-2xl font-bold text-white tracking-wide">
+          <Link href="/" className="group flex items-center gap-2">
+            <Scissors className="text-gold h-6 w-6 transition-transform duration-300 group-hover:rotate-45" />
+            <span className="font-serif text-2xl font-bold tracking-wide text-white">
               {content.brand.name}
             </span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden items-center gap-8 md:flex">
             {content.navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative text-sm font-medium text-white/80 hover:text-white transition-colors py-1"
+                className="relative py-1 text-sm font-medium text-white/80 transition-colors hover:text-white"
               >
                 {item.label}
                 {pathname === item.href && (
                   <motion.div
                     layoutId="nav-underline"
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-gold"
+                    className="bg-gold absolute right-0 bottom-0 left-0 h-[2px]"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -64,7 +64,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/booking"
-              className="ml-4 px-5 py-2 bg-gold text-charcoal font-semibold text-sm rounded-full hover:bg-gold-light transition-colors"
+              className="bg-gold text-charcoal hover:bg-gold-light ml-4 rounded-full px-5 py-2 text-sm font-semibold transition-colors"
             >
               Book Now
             </Link>
@@ -72,14 +72,14 @@ export default function Navbar() {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden text-white p-2"
+            className="p-2 text-white md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
-              <X className="w-6 h-6" />
+              <X className="h-6 w-6" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="h-6 w-6" />
             )}
           </button>
         </nav>
@@ -89,7 +89,7 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-charcoal/98 flex flex-col items-center justify-center gap-8"
+            className="bg-charcoal/98 fixed inset-0 z-40 flex flex-col items-center justify-center gap-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -105,7 +105,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className={`text-3xl font-serif ${
+                  className={`font-serif text-3xl ${
                     pathname === item.href ? "text-gold" : "text-white"
                   } hover:text-gold transition-colors`}
                   onClick={() => setMobileOpen(false)}
@@ -121,7 +121,7 @@ export default function Navbar() {
             >
               <Link
                 href="/booking"
-                className="mt-4 px-8 py-3 bg-gold text-charcoal font-semibold text-lg rounded-full"
+                className="bg-gold text-charcoal mt-4 rounded-full px-8 py-3 text-lg font-semibold"
                 onClick={() => setMobileOpen(false)}
               >
                 Book Now

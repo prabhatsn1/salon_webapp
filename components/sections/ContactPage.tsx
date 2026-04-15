@@ -53,11 +53,11 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[50vh] flex items-center justify-center bg-charcoal overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 to-charcoal" />
-        <div className="relative z-10 text-center px-6">
+      <section className="bg-charcoal relative flex h-[50vh] items-center justify-center overflow-hidden">
+        <div className="from-charcoal/80 to-charcoal absolute inset-0 bg-gradient-to-b" />
+        <div className="relative z-10 px-6 text-center">
           <motion.h1
-            className="font-serif text-5xl md:text-7xl text-white mb-4"
+            className="mb-4 font-serif text-5xl text-white md:text-7xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -65,7 +65,7 @@ export default function ContactPage() {
             {contact.page_heading}
           </motion.h1>
           <motion.p
-            className="text-white/60 text-lg max-w-xl mx-auto"
+            className="mx-auto max-w-xl text-lg text-white/60"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -76,21 +76,21 @@ export default function ContactPage() {
       </section>
 
       {/* Split Layout */}
-      <section className="py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="bg-cream py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-2">
           {/* Left - Contact Info */}
           <AnimatedSection direction="left">
-            <h2 className="font-serif text-3xl text-charcoal mb-8">
+            <h2 className="text-charcoal mb-8 font-serif text-3xl">
               Contact Information
             </h2>
 
-            <div className="space-y-6 mb-10">
+            <div className="mb-10 space-y-6">
               <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-gold" />
+                <div className="bg-gold/10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
+                  <MapPin className="text-gold h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-charcoal">Address</p>
+                  <p className="text-charcoal font-medium">Address</p>
                   <p className="text-charcoal/60 text-sm">
                     {brand.address.street}
                   </p>
@@ -101,28 +101,28 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-gold" />
+                <div className="bg-gold/10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
+                  <Phone className="text-gold h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-charcoal">Phone</p>
+                  <p className="text-charcoal font-medium">Phone</p>
                   <a
                     href={`tel:${brand.phone}`}
-                    className="text-charcoal/60 text-sm hover:text-gold transition-colors"
+                    className="text-charcoal/60 hover:text-gold text-sm transition-colors"
                   >
                     {brand.phone}
                   </a>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-gold" />
+                <div className="bg-gold/10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
+                  <Mail className="text-gold h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-charcoal">Email</p>
+                  <p className="text-charcoal font-medium">Email</p>
                   <a
                     href={`mailto:${brand.email}`}
-                    className="text-charcoal/60 text-sm hover:text-gold transition-colors"
+                    className="text-charcoal/60 hover:text-gold text-sm transition-colors"
                   >
                     {brand.email}
                   </a>
@@ -131,15 +131,15 @@ export default function ContactPage() {
             </div>
 
             {/* Business Hours */}
-            <h3 className="font-serif text-xl text-charcoal mb-4 flex items-center gap-2">
-              <Clock className="w-5 h-5 text-gold" />
+            <h3 className="text-charcoal mb-4 flex items-center gap-2 font-serif text-xl">
+              <Clock className="text-gold h-5 w-5" />
               Business Hours
             </h3>
-            <div className="space-y-2 mb-10">
+            <div className="mb-10 space-y-2">
               {brand.hours.map((h, i) => (
                 <AnimatedSection key={h.day} direction="up" delay={i * 0.05}>
                   <div
-                    className={`flex justify-between py-2 px-4 rounded-lg text-sm ${
+                    className={`flex justify-between rounded-lg px-4 py-2 text-sm ${
                       h.day === today
                         ? "bg-gold/10 text-charcoal font-medium"
                         : "text-charcoal/70"
@@ -161,11 +161,11 @@ export default function ContactPage() {
                   href={brand.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center text-white hover:bg-gold hover:text-charcoal transition-all"
+                  className="bg-charcoal hover:bg-gold hover:text-charcoal flex h-12 w-12 items-center justify-center rounded-full text-white transition-all"
                   whileHover={{ scale: 1.1 }}
                   aria-label="Instagram"
                 >
-                  <Globe className="w-5 h-5" />
+                  <Globe className="h-5 w-5" />
                 </motion.a>
               )}
               {brand.social.facebook && (
@@ -173,11 +173,11 @@ export default function ContactPage() {
                   href={brand.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center text-white hover:bg-gold hover:text-charcoal transition-all"
+                  className="bg-charcoal hover:bg-gold hover:text-charcoal flex h-12 w-12 items-center justify-center rounded-full text-white transition-all"
                   whileHover={{ scale: 1.1 }}
                   aria-label="Facebook"
                 >
-                  <ExternalLink className="w-5 h-5" />
+                  <ExternalLink className="h-5 w-5" />
                 </motion.a>
               )}
             </div>
@@ -185,21 +185,21 @@ export default function ContactPage() {
 
           {/* Right - Contact Form */}
           <AnimatedSection direction="right">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h2 className="font-serif text-3xl text-charcoal mb-8">
+            <div className="rounded-2xl bg-white p-8 shadow-lg">
+              <h2 className="text-charcoal mb-8 font-serif text-3xl">
                 Send Us a Message
               </h2>
 
               {submitted ? (
                 <motion.div
-                  className="text-center py-12"
+                  className="py-12 text-center"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                 >
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold/15 flex items-center justify-center">
-                    <Check className="w-8 h-8 text-gold" />
+                  <div className="bg-gold/15 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full">
+                    <Check className="text-gold h-8 w-8" />
                   </div>
-                  <p className="text-charcoal font-medium text-lg">
+                  <p className="text-charcoal text-lg font-medium">
                     {contact.form_success_message}
                   </p>
                 </motion.div>
@@ -212,7 +212,7 @@ export default function ContactPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.1 }}
                     >
-                      <label className="block text-sm font-medium text-charcoal/70 mb-1">
+                      <label className="text-charcoal/70 mb-1 block text-sm font-medium">
                         {field.label}
                       </label>
                       {field.type === "textarea" ? (
@@ -220,21 +220,21 @@ export default function ContactPage() {
                           {...register(field.name as keyof ContactForm)}
                           placeholder={field.placeholder}
                           rows={4}
-                          className="w-full px-4 py-3 rounded-xl border border-charcoal/15 bg-cream/50 focus:outline-none focus:border-gold transition-colors resize-none"
+                          className="border-charcoal/15 bg-cream/50 focus:border-gold w-full resize-none rounded-xl border px-4 py-3 transition-colors focus:outline-none"
                         />
                       ) : (
                         <input
                           type={field.type}
                           {...register(field.name as keyof ContactForm)}
                           placeholder={field.placeholder}
-                          className="w-full px-4 py-3 rounded-xl border border-charcoal/15 bg-cream/50 focus:outline-none focus:border-gold transition-colors"
+                          className="border-charcoal/15 bg-cream/50 focus:border-gold w-full rounded-xl border px-4 py-3 transition-colors focus:outline-none"
                         />
                       )}
                       {errors[field.name as keyof ContactForm] && (
                         <motion.p
                           initial={{ opacity: 0, y: -5 }}
                           animate={{ opacity: 1, y: 0 }}
-                          className="text-red-500 text-xs mt-1"
+                          className="mt-1 text-xs text-red-500"
                         >
                           {errors[field.name as keyof ContactForm]?.message}
                         </motion.p>
@@ -244,12 +244,12 @@ export default function ContactPage() {
                   <motion.button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-3 bg-gold text-charcoal font-semibold rounded-full hover:bg-gold-light transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+                    className="bg-gold text-charcoal hover:bg-gold-light flex w-full items-center justify-center gap-2 rounded-full py-3 font-semibold transition-all disabled:opacity-70"
                     whileTap={{ scale: 0.98 }}
                   >
                     {loading ? (
                       <motion.div
-                        className="w-5 h-5 border-2 border-charcoal/30 border-t-charcoal rounded-full"
+                        className="border-charcoal/30 border-t-charcoal h-5 w-5 rounded-full border-2"
                         animate={{ rotate: 360 }}
                         transition={{
                           duration: 1,
@@ -260,7 +260,7 @@ export default function ContactPage() {
                     ) : (
                       <>
                         Send Message
-                        <Send className="w-4 h-4" />
+                        <Send className="h-4 w-4" />
                       </>
                     )}
                   </motion.button>
@@ -272,15 +272,15 @@ export default function ContactPage() {
       </section>
 
       {/* Map */}
-      <section className="h-[400px] bg-charcoal-light relative">
-        <div className="absolute inset-0 flex items-center justify-center text-white/20 font-serif text-2xl">
+      <section className="bg-charcoal-light relative h-[400px]">
+        <div className="absolute inset-0 flex items-center justify-center font-serif text-2xl text-white/20">
           <div className="text-center">
             <motion.div
               initial={{ y: -30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
             >
-              <MapPin className="w-12 h-12 text-gold mx-auto mb-4" />
+              <MapPin className="text-gold mx-auto mb-4 h-12 w-12" />
             </motion.div>
             <p>{brand.address.street}</p>
             <p className="text-sm text-white/10">

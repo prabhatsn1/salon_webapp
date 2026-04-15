@@ -20,11 +20,11 @@ export default function GalleryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[50vh] flex items-center justify-center bg-charcoal overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 to-charcoal" />
-        <div className="relative z-10 text-center px-6">
+      <section className="bg-charcoal relative flex h-[50vh] items-center justify-center overflow-hidden">
+        <div className="from-charcoal/80 to-charcoal absolute inset-0 bg-gradient-to-b" />
+        <div className="relative z-10 px-6 text-center">
           <motion.h1
-            className="font-serif text-5xl md:text-7xl text-white mb-4"
+            className="mb-4 font-serif text-5xl text-white md:text-7xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -32,7 +32,7 @@ export default function GalleryPage() {
             Our Gallery
           </motion.h1>
           <motion.p
-            className="text-white/60 text-lg"
+            className="text-lg text-white/60"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -43,13 +43,13 @@ export default function GalleryPage() {
       </section>
 
       {/* Filter */}
-      <section className="sticky top-0 z-30 bg-cream border-b border-charcoal/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex gap-2 overflow-x-auto no-scrollbar">
+      <section className="bg-cream border-charcoal/10 sticky top-0 z-30 border-b">
+        <div className="no-scrollbar mx-auto flex max-w-7xl gap-2 overflow-x-auto px-6 py-4">
           {gallery.categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`relative px-5 py-2 text-sm font-medium whitespace-nowrap rounded-full transition-colors ${
+              className={`relative rounded-full px-5 py-2 text-sm font-medium whitespace-nowrap transition-colors ${
                 activeFilter === cat
                   ? "text-charcoal"
                   : "text-charcoal/50 hover:text-charcoal/80"
@@ -59,7 +59,7 @@ export default function GalleryPage() {
               {activeFilter === cat && (
                 <motion.div
                   layoutId="gallery-tab"
-                  className="absolute inset-0 bg-gold/15 rounded-full -z-10"
+                  className="bg-gold/15 absolute inset-0 -z-10 rounded-full"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
@@ -69,10 +69,10 @@ export default function GalleryPage() {
       </section>
 
       {/* Masonry Grid */}
-      <section className="py-20 bg-cream">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-cream py-20">
+        <div className="mx-auto max-w-7xl px-6">
           <motion.div
-            className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6"
+            className="columns-1 gap-6 space-y-6 sm:columns-2 lg:columns-3"
             layout
           >
             <AnimatePresence>
@@ -84,11 +84,11 @@ export default function GalleryPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.85 }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="break-inside-avoid group cursor-pointer"
+                  className="group cursor-pointer break-inside-avoid"
                   onClick={() => setLightboxImage(img.src)}
                 >
                   <motion.div
-                    className="relative overflow-hidden rounded-2xl bg-charcoal-light shadow-lg"
+                    className="bg-charcoal-light relative overflow-hidden rounded-2xl shadow-lg"
                     whileHover={{
                       rotateX: 2,
                       rotateY: -2,
@@ -109,11 +109,11 @@ export default function GalleryPage() {
                       <img
                         src={img.src}
                         alt={img.alt}
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute inset-0 h-full w-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <p className="text-white text-sm font-medium">
+                      <div className="from-charcoal/60 absolute inset-0 bg-gradient-to-t via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                      <div className="absolute right-4 bottom-4 left-4 opacity-0 transition-opacity group-hover:opacity-100">
+                        <p className="text-sm font-medium text-white">
                           {img.alt}
                         </p>
                         <p className="text-gold text-xs">{img.category}</p>
@@ -131,7 +131,7 @@ export default function GalleryPage() {
       <AnimatePresence>
         {lightboxImage && (
           <motion.div
-            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-6"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -142,10 +142,10 @@ export default function GalleryPage() {
               onClick={() => setLightboxImage(null)}
               aria-label="Close lightbox"
             >
-              <X className="w-8 h-8" />
+              <X className="h-8 w-8" />
             </button>
             <motion.div
-              className="max-w-4xl w-full aspect-[4/3] rounded-2xl overflow-hidden relative"
+              className="relative aspect-[4/3] w-full max-w-4xl overflow-hidden rounded-2xl"
               initial={{ scale: 0.85, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}
@@ -155,7 +155,7 @@ export default function GalleryPage() {
               <img
                 src={lightboxImage}
                 alt="Gallery preview"
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </motion.div>
           </motion.div>

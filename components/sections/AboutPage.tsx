@@ -34,11 +34,11 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[70vh] flex items-center justify-center bg-charcoal overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 to-charcoal" />
-        <div className="relative z-10 text-center max-w-4xl px-6">
+      <section className="bg-charcoal relative flex h-[70vh] items-center justify-center overflow-hidden">
+        <div className="from-charcoal/60 to-charcoal absolute inset-0 bg-gradient-to-b" />
+        <div className="relative z-10 max-w-4xl px-6 text-center">
           <motion.p
-            className="text-gold text-sm tracking-widest uppercase mb-4"
+            className="text-gold mb-4 text-sm tracking-widest uppercase"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -46,7 +46,7 @@ export default function AboutPage() {
             {about.story.subheading}
           </motion.p>
           <motion.h1
-            className="font-serif text-5xl md:text-7xl text-white mb-6"
+            className="mb-6 font-serif text-5xl text-white md:text-7xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -57,40 +57,40 @@ export default function AboutPage() {
       </section>
 
       {/* Brand Story */}
-      <section className="py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="bg-cream py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 md:grid-cols-2">
           <AnimatedSection direction="left">
-            <p className="text-lg text-charcoal/70 leading-relaxed">
+            <p className="text-charcoal/70 text-lg leading-relaxed">
               {about.story.text}
             </p>
           </AnimatedSection>
           <AnimatedSection direction="right">
-            <div className="aspect-[4/5] rounded-2xl shadow-2xl relative overflow-hidden">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src={about.story.image}
                 alt={about.story.heading}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gold/10 to-transparent" />
+              <div className="from-gold/10 absolute inset-0 bg-gradient-to-t to-transparent" />
             </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Timeline */}
-      <section className="py-24 bg-cream-dark">
-        <AnimatedSection direction="up" className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal">
+      <section className="bg-cream-dark py-24">
+        <AnimatedSection direction="up" className="mb-16 text-center">
+          <h2 className="text-charcoal font-serif text-4xl md:text-5xl">
             Our Journey
           </h2>
         </AnimatedSection>
 
-        <div ref={timelineRef} className="relative max-w-4xl mx-auto px-6">
+        <div ref={timelineRef} className="relative mx-auto max-w-4xl px-6">
           {/* Timeline line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-charcoal/10">
+          <div className="bg-charcoal/10 absolute top-0 bottom-0 left-1/2 w-[2px] -translate-x-1/2">
             {!shouldReduce && (
               <motion.div
-                className="w-full bg-gold origin-top"
+                className="bg-gold w-full origin-top"
                 style={{ scaleY: lineScaleY, height: "100%" }}
               />
             )}
@@ -104,23 +104,23 @@ export default function AboutPage() {
               className={`relative mb-16 md:w-1/2 ${
                 i % 2 === 0
                   ? "md:pr-16 md:text-right"
-                  : "md:pl-16 md:text-left md:ml-auto"
+                  : "md:ml-auto md:pl-16 md:text-left"
               }`}
             >
               {/* Dot */}
               <div
-                className={`absolute top-2 w-4 h-4 bg-gold rounded-full border-4 border-cream-dark z-10 ${
+                className={`bg-gold border-cream-dark absolute top-2 z-10 h-4 w-4 rounded-full border-4 ${
                   i % 2 === 0
-                    ? "right-0 md:-right-2 left-auto"
+                    ? "right-0 left-auto md:-right-2"
                     : "left-0 md:-left-2"
                 } hidden md:block`}
                 style={{ transform: "translateX(50%)" }}
               />
-              <div className="bg-white rounded-2xl p-6 shadow-md">
+              <div className="rounded-2xl bg-white p-6 shadow-md">
                 <span className="text-gold font-serif text-xl font-bold">
                   {event.year}
                 </span>
-                <h3 className="font-serif text-lg text-charcoal mt-1 mb-2">
+                <h3 className="text-charcoal mt-1 mb-2 font-serif text-lg">
                   {event.title}
                 </h3>
                 <p className="text-charcoal/60 text-sm">{event.description}</p>
@@ -131,28 +131,28 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-24 bg-charcoal">
+      <section className="bg-charcoal py-24">
         <AnimatedSection
           direction="up"
-          className="max-w-3xl mx-auto px-6 text-center"
+          className="mx-auto max-w-3xl px-6 text-center"
         >
-          <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">
+          <h2 className="mb-6 font-serif text-4xl text-white md:text-5xl">
             {about.mission.heading}
           </h2>
-          <p className="text-white/70 text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed text-white/70">
             {about.mission.text}
           </p>
         </AnimatedSection>
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-cream">
-        <AnimatedSection direction="up" className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal">
+      <section className="bg-cream py-24">
+        <AnimatedSection direction="up" className="mb-16 text-center">
+          <h2 className="text-charcoal font-serif text-4xl md:text-5xl">
             Our Values
           </h2>
         </AnimatedSection>
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 md:grid-cols-2 lg:grid-cols-4">
           {about.values.map((value, i) => {
             const Icon = iconMap[value.icon] || Palette;
             return (
@@ -161,11 +161,11 @@ export default function AboutPage() {
                 direction="rotate3d"
                 delay={i * 0.1}
               >
-                <div className="bg-white rounded-2xl p-8 shadow-md text-center h-full">
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-gold/10 flex items-center justify-center">
-                    <Icon className="w-7 h-7 text-gold" />
+                <div className="h-full rounded-2xl bg-white p-8 text-center shadow-md">
+                  <div className="bg-gold/10 mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full">
+                    <Icon className="text-gold h-7 w-7" />
                   </div>
-                  <h3 className="font-serif text-lg text-charcoal mb-2">
+                  <h3 className="text-charcoal mb-2 font-serif text-lg">
                     {value.title}
                   </h3>
                   <p className="text-charcoal/60 text-sm">
@@ -179,20 +179,20 @@ export default function AboutPage() {
       </section>
 
       {/* Sustainability */}
-      <section className="py-24 bg-cream-dark">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="bg-cream-dark py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 md:grid-cols-2">
           <AnimatedSection direction="left">
-            <h2 className="font-serif text-3xl md:text-4xl text-charcoal mb-6">
+            <h2 className="text-charcoal mb-6 font-serif text-3xl md:text-4xl">
               {about.sustainability.heading}
             </h2>
-            <p className="text-charcoal/70 leading-relaxed mb-6">
+            <p className="text-charcoal/70 mb-6 leading-relaxed">
               {about.sustainability.text}
             </p>
             <div className="flex flex-wrap gap-3">
               {about.sustainability.certifications.map((cert) => (
                 <span
                   key={cert}
-                  className="text-xs bg-gold/10 text-gold-dark px-4 py-2 rounded-full font-medium"
+                  className="bg-gold/10 text-gold-dark rounded-full px-4 py-2 text-xs font-medium"
                 >
                   {cert}
                 </span>
@@ -200,11 +200,11 @@ export default function AboutPage() {
             </div>
           </AnimatedSection>
           <AnimatedSection direction="right">
-            <div className="aspect-[4/3] rounded-2xl shadow-xl overflow-hidden">
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
               <img
                 src={about.sustainability.image}
                 alt={about.sustainability.heading}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
           </AnimatedSection>
@@ -212,8 +212,8 @@ export default function AboutPage() {
       </section>
 
       {/* Awards Marquee */}
-      <section className="py-16 bg-charcoal overflow-hidden">
-        <AnimatedSection direction="up" className="text-center mb-10">
+      <section className="bg-charcoal overflow-hidden py-16">
+        <AnimatedSection direction="up" className="mb-10 text-center">
           <h2 className="font-serif text-3xl text-white">
             Awards & Recognition
           </h2>
@@ -225,9 +225,9 @@ export default function AboutPage() {
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
           >
             {[...about.awards, ...about.awards].map((award, i) => (
-              <div key={i} className="flex-shrink-0 text-center px-8">
+              <div key={i} className="flex-shrink-0 px-8 text-center">
                 <p className="text-gold font-serif text-lg">{award.title}</p>
-                <p className="text-white/40 text-sm">
+                <p className="text-sm text-white/40">
                   {award.source} · {award.year}
                 </p>
               </div>
