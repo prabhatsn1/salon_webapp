@@ -1,0 +1,771 @@
+{
+  "brand": {
+    "name": "Aurélia",
+    "tagline": "Where Luxury Meets Artistry",
+    "phone": "+1 (212) 555-0189",
+    "email": "hello@aureliasalon.com",
+    "address": {
+      "street": "742 Madison Avenue",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10065"
+    },
+    "hours": [
+      { "day": "Monday", "open": "9:00 AM", "close": "7:00 PM" },
+      { "day": "Tuesday", "open": "9:00 AM", "close": "8:00 PM" },
+      { "day": "Wednesday", "open": "9:00 AM", "close": "8:00 PM" },
+      { "day": "Thursday", "open": "9:00 AM", "close": "9:00 PM" },
+      { "day": "Friday", "open": "9:00 AM", "close": "9:00 PM" },
+      { "day": "Saturday", "open": "8:00 AM", "close": "7:00 PM" },
+      { "day": "Sunday", "open": "10:00 AM", "close": "5:00 PM" }
+    ],
+    "social": {
+      "instagram": "https://instagram.com/aureliasalon",
+      "facebook": "https://facebook.com/aureliasalon",
+      "pinterest": "https://pinterest.com/aureliasalon",
+      "tiktok": "https://tiktok.com/@aureliasalon"
+    }
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Gallery", "href": "/gallery" },
+    { "label": "Team", "href": "/team" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "home": {
+    "hero": {
+      "headline": "Experience the Art of Beauty",
+      "subheadline": "New York's premier luxury salon, where every visit is a masterpiece.",
+      "cta_text": "Book Your Experience",
+      "cta_link": "/booking",
+      "background_image": "/images/hero-salon.jpg"
+    },
+    "stats": [
+      { "value": 15, "suffix": "+", "label": "Years of Excellence" },
+      { "value": 25000, "suffix": "+", "label": "Happy Clients" },
+      { "value": 18, "suffix": "", "label": "Expert Stylists" },
+      { "value": 98, "suffix": "%", "label": "Client Satisfaction" }
+    ],
+    "intro": {
+      "heading": "A Sanctuary of Style",
+      "text": "At Aurélia, we believe that beauty is an art form. Our award-winning team of stylists combines timeless technique with contemporary innovation, creating looks that are as unique as you are. Step into our world of luxury, where every detail is crafted to perfection.",
+      "image": "/images/salon-interior.jpg",
+      "cta_text": "Our Story",
+      "cta_link": "/about"
+    },
+    "featured_services": [
+      {
+        "title": "Signature Cuts",
+        "description": "Precision cuts tailored to your face shape and lifestyle.",
+        "icon": "Scissors",
+        "image": "/images/service-cuts.jpg"
+      },
+      {
+        "title": "Color Artistry",
+        "description": "From subtle balayage to bold transformations.",
+        "icon": "Palette",
+        "image": "/images/service-color.jpg"
+      },
+      {
+        "title": "Bridal Luxury",
+        "description": "Your dream look for your most memorable day.",
+        "icon": "Crown",
+        "image": "/images/service-bridal.jpg"
+      },
+      {
+        "title": "Spa Treatments",
+        "description": "Rejuvenating facials and skincare rituals.",
+        "icon": "Sparkles",
+        "image": "/images/service-spa.jpg"
+      }
+    ],
+    "why_us": {
+      "heading": "Why Choose Aurélia",
+      "features": [
+        {
+          "title": "Master Stylists",
+          "description": "Our team trains at the world's top academies in Paris, Milan, and Tokyo.",
+          "icon": "Award"
+        },
+        {
+          "title": "Premium Products",
+          "description": "We exclusively use Oribe, Kérastase, and other luxury brands.",
+          "icon": "Gem"
+        },
+        {
+          "title": "Personalized Experience",
+          "description": "Every service begins with an in-depth consultation.",
+          "icon": "Heart"
+        },
+        {
+          "title": "Sustainable Beauty",
+          "description": "Eco-conscious products and practices for a better tomorrow.",
+          "icon": "Leaf"
+        },
+        {
+          "title": "Luxurious Atmosphere",
+          "description": "A serene, design-forward space designed for total relaxation.",
+          "icon": "Star"
+        },
+        {
+          "title": "Flexible Booking",
+          "description": "Easy online booking with same-day availability.",
+          "icon": "Calendar"
+        }
+      ]
+    },
+    "testimonials": [
+      {
+        "name": "Sophia Laurent",
+        "role": "Fashion Editor",
+        "text": "Aurélia transformed my look completely. The attention to detail is unmatched — I've never felt more confident.",
+        "rating": 5,
+        "image": "/images/testimonial-1.jpg"
+      },
+      {
+        "name": "James Chen",
+        "role": "Creative Director",
+        "text": "From the moment you walk in, you know you're in for something special. Truly world-class service.",
+        "rating": 5,
+        "image": "/images/testimonial-2.jpg"
+      },
+      {
+        "name": "Amara Williams",
+        "role": "Model",
+        "text": "The team understands texture, face shape, and personal style like no one else in the city.",
+        "rating": 5,
+        "image": "/images/testimonial-3.jpg"
+      },
+      {
+        "name": "Elena Marchetti",
+        "role": "Entrepreneur",
+        "text": "My bridal hair and makeup were absolute perfection. Every photo from my wedding is a dream.",
+        "rating": 5,
+        "image": "/images/testimonial-4.jpg"
+      },
+      {
+        "name": "David Park",
+        "role": "Architect",
+        "text": "Finally found a salon that treats men's grooming with the same artistry. Outstanding work every time.",
+        "rating": 5,
+        "image": "/images/testimonial-5.jpg"
+      }
+    ],
+    "cta_banner": {
+      "headline": "Your Transformation Awaits",
+      "subheadline": "Book your appointment today and discover the Aurélia difference.",
+      "cta_text": "Book Now",
+      "cta_link": "/booking"
+    }
+  },
+  "services": {
+    "page_heading": "Our Services",
+    "page_subheading": "Explore our curated menu of premium beauty services, each designed to reveal your most radiant self.",
+    "categories": [
+      {
+        "id": "cuts",
+        "title": "Cuts & Styling",
+        "services": [
+          {
+            "name": "Signature Haircut",
+            "duration": "60 min",
+            "price": 120,
+            "description": "Precision cut with consultation, shampoo, and blow-dry styling."
+          },
+          {
+            "name": "Men's Grooming Cut",
+            "duration": "45 min",
+            "price": 85,
+            "description": "Expert cut with hot towel treatment and styling."
+          },
+          {
+            "name": "Children's Cut",
+            "duration": "30 min",
+            "price": 55,
+            "description": "Gentle, fun haircuts for kids 12 and under."
+          },
+          {
+            "name": "Blowout & Style",
+            "duration": "45 min",
+            "price": 75,
+            "description": "Luxurious blowout with your choice of style."
+          },
+          {
+            "name": "Special Occasion Updo",
+            "duration": "75 min",
+            "price": 150,
+            "description": "Elegant updo for galas, weddings, and events."
+          }
+        ]
+      },
+      {
+        "id": "color",
+        "title": "Color",
+        "services": [
+          {
+            "name": "Single Process Color",
+            "duration": "90 min",
+            "price": 160,
+            "description": "Full coverage color with premium Wella or Redken products."
+          },
+          {
+            "name": "Balayage / Ombré",
+            "duration": "180 min",
+            "price": 350,
+            "description": "Hand-painted highlights for a natural, sun-kissed look."
+          },
+          {
+            "name": "Full Highlights",
+            "duration": "150 min",
+            "price": 280,
+            "description": "Classic foil highlights for dimension and brightness."
+          },
+          {
+            "name": "Color Correction",
+            "duration": "240 min",
+            "price": 450,
+            "description": "Expert correction to restore your desired shade."
+          },
+          {
+            "name": "Gloss Treatment",
+            "duration": "45 min",
+            "price": 95,
+            "description": "Add shine and refresh your color with a demi-permanent gloss."
+          }
+        ]
+      },
+      {
+        "id": "treatments",
+        "title": "Treatments",
+        "services": [
+          {
+            "name": "Keratin Smoothing",
+            "duration": "150 min",
+            "price": 350,
+            "description": "Eliminate frizz for up to 3 months with our silk-infused keratin."
+          },
+          {
+            "name": "Deep Conditioning Ritual",
+            "duration": "45 min",
+            "price": 85,
+            "description": "Intense moisture restoration with Olaplex and Kérastase."
+          },
+          {
+            "name": "Scalp Detox Treatment",
+            "duration": "60 min",
+            "price": 110,
+            "description": "Purifying treatment to rejuvenate the scalp and promote growth."
+          },
+          {
+            "name": "Bond Repair (Olaplex)",
+            "duration": "45 min",
+            "price": 95,
+            "description": "Rebuild broken bonds from heat damage and chemical processing."
+          }
+        ]
+      },
+      {
+        "id": "skincare",
+        "title": "Skincare",
+        "services": [
+          {
+            "name": "Luxury Facial",
+            "duration": "75 min",
+            "price": 180,
+            "description": "Customized facial with cleansing, exfoliation, mask, and massage."
+          },
+          {
+            "name": "Express Glow Facial",
+            "duration": "30 min",
+            "price": 95,
+            "description": "Quick revitalizing treatment for instant radiance."
+          },
+          {
+            "name": "Microdermabrasion",
+            "duration": "60 min",
+            "price": 200,
+            "description": "Advanced exfoliation to reveal smoother, younger-looking skin."
+          },
+          {
+            "name": "LED Light Therapy",
+            "duration": "30 min",
+            "price": 85,
+            "description": "Non-invasive treatment for acne, aging, and skin renewal."
+          }
+        ]
+      },
+      {
+        "id": "nails",
+        "title": "Nails",
+        "services": [
+          {
+            "name": "Classic Manicure",
+            "duration": "45 min",
+            "price": 55,
+            "description": "Nail shaping, cuticle care, massage, and polish."
+          },
+          {
+            "name": "Gel Manicure",
+            "duration": "60 min",
+            "price": 75,
+            "description": "Long-lasting gel polish with chip-free shine."
+          },
+          {
+            "name": "Spa Pedicure",
+            "duration": "60 min",
+            "price": 85,
+            "description": "Soak, scrub, massage, and polish for beautiful feet."
+          },
+          {
+            "name": "Nail Art",
+            "duration": "30 min",
+            "price": 40,
+            "description": "Custom designs, French tips, and artistic accents."
+          }
+        ]
+      },
+      {
+        "id": "bridal",
+        "title": "Bridal",
+        "services": [
+          {
+            "name": "Bridal Hair & Makeup Trial",
+            "duration": "120 min",
+            "price": 250,
+            "description": "Complete trial run to perfect your wedding day look."
+          },
+          {
+            "name": "Wedding Day Package",
+            "duration": "180 min",
+            "price": 550,
+            "description": "Hair styling, makeup, and touch-up kit for the bride."
+          },
+          {
+            "name": "Bridal Party Styling",
+            "duration": "90 min",
+            "price": 180,
+            "description": "Hair and makeup for bridesmaids (per person)."
+          },
+          {
+            "name": "Pre-Wedding Glow Package",
+            "duration": "150 min",
+            "price": 380,
+            "description": "Facial, manicure, and conditioning treatment."
+          }
+        ]
+      }
+    ],
+    "consultation_cta": {
+      "heading": "Not sure which service is right for you?",
+      "text": "Book a complimentary consultation with one of our stylists.",
+      "cta_text": "Book Free Consultation",
+      "cta_link": "/booking"
+    }
+  },
+  "gallery": {
+    "categories": ["All", "Hair", "Color", "Skincare", "Nails", "Bridal"],
+    "images": [
+      {
+        "id": 1,
+        "src": "/images/gallery/gallery-1.jpg",
+        "category": "Hair",
+        "alt": "Elegant layered cut with volume"
+      },
+      {
+        "id": 2,
+        "src": "/images/gallery/gallery-2.jpg",
+        "category": "Color",
+        "alt": "Warm caramel balayage highlights"
+      },
+      {
+        "id": 3,
+        "src": "/images/gallery/gallery-3.jpg",
+        "category": "Bridal",
+        "alt": "Romantic bridal updo with flowers"
+      },
+      {
+        "id": 4,
+        "src": "/images/gallery/gallery-4.jpg",
+        "category": "Skincare",
+        "alt": "Luxury facial treatment in progress"
+      },
+      {
+        "id": 5,
+        "src": "/images/gallery/gallery-5.jpg",
+        "category": "Nails",
+        "alt": "Minimalist nail art design"
+      },
+      {
+        "id": 6,
+        "src": "/images/gallery/gallery-6.jpg",
+        "category": "Hair",
+        "alt": "Sleek bob transformation"
+      },
+      {
+        "id": 7,
+        "src": "/images/gallery/gallery-7.jpg",
+        "category": "Color",
+        "alt": "Platinum blonde transformation"
+      },
+      {
+        "id": 8,
+        "src": "/images/gallery/gallery-8.jpg",
+        "category": "Bridal",
+        "alt": "Glamorous wedding makeup"
+      },
+      {
+        "id": 9,
+        "src": "/images/gallery/gallery-9.jpg",
+        "category": "Hair",
+        "alt": "Textured men's cut and style"
+      },
+      {
+        "id": 10,
+        "src": "/images/gallery/gallery-10.jpg",
+        "category": "Color",
+        "alt": "Rich auburn color melt"
+      },
+      {
+        "id": 11,
+        "src": "/images/gallery/gallery-11.jpg",
+        "category": "Nails",
+        "alt": "French tip gel manicure"
+      },
+      {
+        "id": 12,
+        "src": "/images/gallery/gallery-12.jpg",
+        "category": "Skincare",
+        "alt": "Radiant skin after glow facial"
+      }
+    ]
+  },
+  "team": {
+    "page_heading": "Meet Our Team",
+    "intro": "Our world-class team of stylists, colorists, and beauty experts bring decades of combined experience and a shared passion for making you look and feel extraordinary.",
+    "members": [
+      {
+        "name": "Isabella Fontaine",
+        "role": "Creative Director & Master Stylist",
+        "bio": "With 20 years of experience and training at Vidal Sassoon London, Isabella leads our creative vision. She specializes in transformative cuts and editorial styling.",
+        "specialties": [
+          "Precision Cuts",
+          "Editorial Styling",
+          "Hair Architecture"
+        ],
+        "image": "/images/team/stylist-1.jpg",
+        "social": { "instagram": "#", "linkedin": "#" }
+      },
+      {
+        "name": "Marcus Rivera",
+        "role": "Senior Colorist",
+        "bio": "Marcus is a color genius known for his seamless balayage and bold creative color. Trained in Paris, he brings European artistry to every appointment.",
+        "specialties": ["Balayage", "Color Correction", "Vivid Color"],
+        "image": "/images/team/stylist-2.jpg",
+        "social": { "instagram": "#", "linkedin": "#" }
+      },
+      {
+        "name": "Aiko Tanaka",
+        "role": "Senior Stylist",
+        "bio": "Aiko brings 15 years of Tokyo-trained precision to New York. Her minimalist, architectural approach to cutting has earned her a devoted following.",
+        "specialties": ["Japanese Straightening", "Textured Cuts", "Updos"],
+        "image": "/images/team/stylist-3.jpg",
+        "social": { "instagram": "#", "linkedin": "#" }
+      },
+      {
+        "name": "Charlotte Duval",
+        "role": "Bridal Specialist",
+        "bio": "Charlotte has styled over 500 brides and has been featured in Vogue Weddings and Martha Stewart. She creates timeless, romantic looks.",
+        "specialties": ["Bridal Hair", "Bridal Makeup", "Special Occasions"],
+        "image": "/images/team/stylist-4.jpg",
+        "social": { "instagram": "#", "linkedin": "#" }
+      },
+      {
+        "name": "Devon Mitchell",
+        "role": "Skin Care Specialist",
+        "bio": "A licensed esthetician with advanced certifications in medical-grade facials, Devon transforms skin with science-backed treatments and personalized regimens.",
+        "specialties": ["Facials", "Chemical Peels", "LED Therapy"],
+        "image": "/images/team/stylist-5.jpg",
+        "social": { "instagram": "#", "linkedin": "#" }
+      },
+      {
+        "name": "Nina Volkov",
+        "role": "Nail Artist",
+        "bio": "Originally from Moscow, Nina is an award-winning nail artist whose intricate designs have been featured in Elle and Harper's Bazaar.",
+        "specialties": ["Nail Art", "Gel Extensions", "Spa Manicures"],
+        "image": "/images/team/stylist-6.jpg",
+        "social": { "instagram": "#", "linkedin": "#" }
+      }
+    ]
+  },
+  "booking": {
+    "page_heading": "Book Your Appointment",
+    "page_subheading": "Select your service, stylist, and preferred time. We can't wait to see you.",
+    "steps": [
+      { "number": 1, "title": "Select Service" },
+      { "number": 2, "title": "Choose Stylist" },
+      { "number": 3, "title": "Pick Date & Time" },
+      { "number": 4, "title": "Your Details" }
+    ],
+    "services_list": [
+      {
+        "id": "sig-cut",
+        "name": "Signature Haircut",
+        "duration": "60 min",
+        "price": 120
+      },
+      {
+        "id": "balayage",
+        "name": "Balayage / Ombré",
+        "duration": "180 min",
+        "price": 350
+      },
+      {
+        "id": "keratin",
+        "name": "Keratin Smoothing",
+        "duration": "150 min",
+        "price": 350
+      },
+      {
+        "id": "facial",
+        "name": "Luxury Facial",
+        "duration": "75 min",
+        "price": 180
+      },
+      {
+        "id": "bridal",
+        "name": "Wedding Day Package",
+        "duration": "180 min",
+        "price": 550
+      },
+      {
+        "id": "mani",
+        "name": "Gel Manicure",
+        "duration": "60 min",
+        "price": 75
+      },
+      {
+        "id": "blowout",
+        "name": "Blowout & Style",
+        "duration": "45 min",
+        "price": 75
+      },
+      {
+        "id": "color",
+        "name": "Single Process Color",
+        "duration": "90 min",
+        "price": 160
+      }
+    ],
+    "stylists": [
+      {
+        "id": "isabella",
+        "name": "Isabella Fontaine",
+        "role": "Creative Director",
+        "image": "/images/team/stylist-1.jpg"
+      },
+      {
+        "id": "marcus",
+        "name": "Marcus Rivera",
+        "role": "Senior Colorist",
+        "image": "/images/team/stylist-2.jpg"
+      },
+      {
+        "id": "aiko",
+        "name": "Aiko Tanaka",
+        "role": "Senior Stylist",
+        "image": "/images/team/stylist-3.jpg"
+      },
+      {
+        "id": "charlotte",
+        "name": "Charlotte Duval",
+        "role": "Bridal Specialist",
+        "image": "/images/team/stylist-4.jpg"
+      },
+      {
+        "id": "devon",
+        "name": "Devon Mitchell",
+        "role": "Skin Care Specialist",
+        "image": "/images/team/stylist-5.jpg"
+      },
+      {
+        "id": "nina",
+        "name": "Nina Volkov",
+        "role": "Nail Artist",
+        "image": "/images/team/stylist-6.jpg"
+      }
+    ],
+    "time_slots": [
+      "9:00 AM",
+      "9:30 AM",
+      "10:00 AM",
+      "10:30 AM",
+      "11:00 AM",
+      "11:30 AM",
+      "12:00 PM",
+      "12:30 PM",
+      "1:00 PM",
+      "1:30 PM",
+      "2:00 PM",
+      "2:30 PM",
+      "3:00 PM",
+      "3:30 PM",
+      "4:00 PM",
+      "4:30 PM",
+      "5:00 PM",
+      "5:30 PM"
+    ],
+    "confirmation": {
+      "heading": "Booking Confirmed!",
+      "message": "We look forward to seeing you. A confirmation email has been sent to your inbox.",
+      "cta_text": "Back to Home",
+      "cta_link": "/"
+    }
+  },
+  "about": {
+    "story": {
+      "heading": "Our Story",
+      "subheading": "A Legacy of Beauty, Born from Passion",
+      "text": "Founded in 2010 by Isabella Fontaine, Aurélia began as a small studio in the heart of Manhattan with a bold vision: to redefine the salon experience. What started as a two-chair operation has blossomed into one of New York's most sought-after beauty destinations, celebrated for its artistry, innovation, and commitment to making every client feel extraordinary.",
+      "image": "/images/about-story.jpg"
+    },
+    "mission": {
+      "heading": "Our Mission",
+      "text": "To elevate the art of beauty through personalized, world-class service in a space that inspires confidence and self-expression."
+    },
+    "timeline": [
+      {
+        "year": "2010",
+        "title": "The Beginning",
+        "description": "Isabella Fontaine opens a two-chair studio on the Upper East Side with a dream of redefining beauty."
+      },
+      {
+        "year": "2013",
+        "title": "First Award",
+        "description": "Aurélia wins 'Best New Salon' from New York Magazine, putting us on the map."
+      },
+      {
+        "year": "2015",
+        "title": "Expansion",
+        "description": "We move to our flagship location on Madison Avenue, tripling our space and team."
+      },
+      {
+        "year": "2017",
+        "title": "Bridal Studio Launch",
+        "description": "Launch of our dedicated bridal suite, becoming the go-to salon for NYC weddings."
+      },
+      {
+        "year": "2019",
+        "title": "Sustainability Pledge",
+        "description": "Aurélia becomes the first salon in Manhattan to achieve Green Circle certification."
+      },
+      {
+        "year": "2021",
+        "title": "Digital Innovation",
+        "description": "Launch of our online booking platform and virtual consultation services."
+      },
+      {
+        "year": "2024",
+        "title": "15 Years of Excellence",
+        "description": "Celebrating 15 years with over 25,000 happy clients and counting."
+      }
+    ],
+    "values": [
+      {
+        "title": "Artistry",
+        "description": "We treat every service as a work of art, combining technique with creative vision.",
+        "icon": "Palette"
+      },
+      {
+        "title": "Excellence",
+        "description": "We never stop learning, training, and pushing the boundaries of our craft.",
+        "icon": "Trophy"
+      },
+      {
+        "title": "Inclusivity",
+        "description": "Beauty has no boundaries. We celebrate and serve every individual.",
+        "icon": "Users"
+      },
+      {
+        "title": "Sustainability",
+        "description": "We're committed to eco-friendly products, practices, and a greener future.",
+        "icon": "Leaf"
+      }
+    ],
+    "sustainability": {
+      "heading": "Our Commitment to Sustainability",
+      "text": "We believe beauty shouldn't come at the planet's expense. From our Green Circle Salon certification to our partnerships with sustainable brands, we're taking real steps toward a more responsible future. All of our products are cruelty-free, and we recycle over 95% of our salon waste.",
+      "certifications": [
+        "Green Circle Certified",
+        "Cruelty-Free",
+        "B-Corp Pending",
+        "Carbon Neutral Operations"
+      ],
+      "image": "/images/sustainability.jpg"
+    },
+    "awards": [
+      {
+        "title": "Best Luxury Salon — NYC",
+        "source": "New York Magazine",
+        "year": "2023"
+      },
+      {
+        "title": "Top 10 Salons in America",
+        "source": "Allure Magazine",
+        "year": "2022"
+      },
+      {
+        "title": "Best Bridal Hair Studio",
+        "source": "The Knot",
+        "year": "2023"
+      },
+      {
+        "title": "Sustainability Excellence Award",
+        "source": "Green Beauty Council",
+        "year": "2024"
+      },
+      {
+        "title": "Best Colorist Team",
+        "source": "Behind the Chair",
+        "year": "2022"
+      }
+    ]
+  },
+  "contact": {
+    "page_heading": "Get in Touch",
+    "page_subheading": "We'd love to hear from you. Reach out with questions, feedback, or to book your next visit.",
+    "form_fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "placeholder": "Your name",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "you@example.com",
+        "required": true
+      },
+      {
+        "name": "subject",
+        "label": "Subject",
+        "type": "text",
+        "placeholder": "How can we help?",
+        "required": true
+      },
+      {
+        "name": "message",
+        "label": "Message",
+        "type": "textarea",
+        "placeholder": "Tell us more...",
+        "required": true
+      }
+    ],
+    "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.2!2d-73.97!3d40.77!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ2JzEyLjAiTiA3M8KwNTgnMTIuMCJX!5e0!3m2!1sen!2sus!4v1",
+    "form_success_message": "Thank you! We'll get back to you within 24 hours."
+  }
+}
